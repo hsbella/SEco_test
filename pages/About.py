@@ -41,6 +41,7 @@ SVI(i) = 100 \times \left[
 st.markdown("""
 <br>
 <small>📎 w_hall = 공연장 가중치, w_genre = 장르 가중치, audience_scaling = 관람인원 스케일링</small>
+<br><br>
 """, unsafe_allow_html=True)
 
 # ---------------------
@@ -59,6 +60,7 @@ st.markdown("""
 <br>
 <small>
 📎 visitors_scaling = 방문자수, parking_scaling = 주차량, facility_scaling = 시설 이용량 스케일링</small>
+<br><br>
 """, unsafe_allow_html=True)
 
 # ---------------------
@@ -76,6 +78,7 @@ st.markdown("""
 <br>
 <small>
 📎 CO2_norm = CO₂ 증가량 정규화, ΔT_norm = 온도 변화 정규화, ΔH_norm = 습도 변화 정규화, PM_factor = 미세먼지 반영값, season_factor = 계절 보정</small>
+<br><br>
 """, unsafe_allow_html=True)
 
 # ---------------------
