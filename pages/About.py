@@ -28,7 +28,7 @@ SafetyEco INDEX로 올림픽공원 공연장(진동·소음)과 스포츠센터(
 
 # ---------------------
 # SVI
-st.markdown("###### 🎵 SVI (공연 특성 지수)")
+st.markdown("###### 1️⃣ SVI (공연 특성 지수)")
 
 st.latex(r"""
 SVI(i) = 100 \times \left[ 
@@ -46,7 +46,7 @@ st.markdown("""
 
 # ---------------------
 # HLI
-st.markdown("###### 🚶 HLI (혼잡 부하 지수)")
+st.markdown("###### 2️⃣ HLI (혼잡 부하 지수)")
 
 st.latex(r"""
 HLI(i) = 100 \times \left[
@@ -65,7 +65,7 @@ st.markdown("""
 
 # ---------------------
 # AQHI
-st.markdown("###### 🌫️ AQHI (실내 공기질 지수)")
+st.markdown("###### 3️⃣ AQHI (실내 공기질 지수)")
 
 st.latex(r"""
 AQHI_{raw} = 0.5 \cdot CO2_{norm}
@@ -83,7 +83,7 @@ st.markdown("""
 
 # ---------------------
 # SEco
-st.markdown("###### 🔗 SEco 통합 지수")
+st.markdown("###### 4️⃣ SEco 통합 지수")
 
 st.latex(r"""
 CVI = 0.7 \cdot SVI_{\text{lite}} + 0.3 \cdot HLI_{\text{lite}}
@@ -114,11 +114,11 @@ st.markdown("""
 본 예측 모델은 공연장 환경·안전 지수(SEco)를 예측하기 위해  
 다음과 같은 머신러닝 파이프라인으로 학습되었습니다.
 
-##### 1️⃣ 전처리
+###### 1️⃣ 전처리
 - **OneHotEncoder** : 공연장/장르를 벡터로 인코딩  
 - **ColumnTransformer** : 범주형 + 수치형 일괄 처리
 
-##### 2️⃣ 입력 특징 (Features)
+###### 2️⃣ 입력 특징 (Features)
 | Feature | 설명 |
 |--------|------|
 | 공연장 | 공연장 종류 |
@@ -126,13 +126,13 @@ st.markdown("""
 | 관람 인원 | 관람객 수 |
 | MONTH | 공연 월(계절성 반영) |
 
-##### 3️⃣ 모델 (Regressor)
+###### 3️⃣ 모델 (Regressor)
 - **XGBoost Regressor**
 - n_estimators = 300  
 - learning_rate = 0.1  
 - max_depth = 5  
 
-##### 4️⃣ 출력 (Output)
+###### 4️⃣ 출력 (Output)
 - **SEco 위험도 (0~100)**  
 - 위험도 기반 1~5단계 등급 분류
 
