@@ -7,9 +7,10 @@ st.markdown("""
 ### **: 올림픽공원 공연 위험도 예측 시스템**
 """)
 
+st.markdown("""
+
 ---
 
-st.markdown("""
 \n\n\n\n\n ### 👋 올공지기 웹사이트에 오신 것을 환영합니다 👋
 
 
@@ -24,6 +25,7 @@ st.markdown("""
 - **Predict**<br>Streamlit 기반 UI로 빠른 위험도 예측  
 - **Visualization**<br>월별 시계열·Heatmap·공연별 위험도·지수 비교·Pie chart 시각화 제공
 """, unsafe_allow_html=True)
+
 
 
 
