@@ -21,10 +21,11 @@ st.markdown("""
 
 st.markdown("""
 ### 💁 사용 가이드
-- **About**<br>SEco 알고리즘 및 데이터 처리 구조  
-- **Predict**<br>Streamlit 기반 UI로 빠른 위험도 예측  
-- **Visualization**<br>월별 시계열·Heatmap·공연별 위험도·지수 비교·Pie chart 시각화 제공
+- **About**<br> 모델 설명 : SEco 알고리즘 및 데이터 처리 구조  
+- **Predict**<br> 예측 모델 : Streamlit 기반 UI로 빠른 위험도 예측  
+- **Visualization**<br> 데이터 시각화 : 월별 시계열·Heatmap·공연별 위험도·지수 비교·Pie chart 시각화 제공
 """, unsafe_allow_html=True)
+
 
 
 
