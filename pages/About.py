@@ -5,8 +5,7 @@ st.title("모델 설명 (SEco 구성)")
 st.markdown("""
 ### 📌 SEco란?
 
-SafetyEco INDEX로 올림픽공원 공연장(진동·소음)과 스포츠센터(운동강도·공기질·혼잡)를 하나의 ‘안전·환경 통합지수’로 묶어  
-AI 기반으로 공연 위험도를 자동 예측하는 ESG 기반 시스템입니다.
+SafetyEco INDEX로 올림픽공원 공연장(진동·소음)과 스포츠센터(운동강도·공기질·혼잡)를 하나의 ‘안전·환경 통합지수’로 묶어 AI 기반으로 공연 위험도를 자동 예측하는 ESG 기반 시스템입니다.
 
 ---
 
@@ -39,7 +38,10 @@ SVI(i) = 100 \times \left[
 \right]
 """)
 
-st.markdown("📎 w_hall = 공연장 가중치, w_genre = 장르 가중치, audience_scaling = 관람인원 스케일링")
+st.markdown("""
+<br>
+<small>📎 w_hall = 공연장 가중치, w_genre = 장르 가중치, audience_scaling = 관람인원 스케일링</small>
+""", unsafe_allow_html=True)
 
 # ---------------------
 # HLI
@@ -53,7 +55,11 @@ HLI(i) = 100 \times \left[
 \right]
 """)
 
-st.markdown("📎 visitors_scaling = 방문자수, parking_scaling = 주차량, facility_scaling = 시설 이용량 스케일링")
+st.markdown("""
+<br>
+<small>
+📎 visitors_scaling = 방문자수, parking_scaling = 주차량, facility_scaling = 시설 이용량 스케일링</small>
+""", unsafe_allow_html=True)
 
 # ---------------------
 # AQHI
@@ -66,7 +72,11 @@ AQHI_{raw} = 0.5 \cdot CO2_{norm}
 + 0.1 \cdot \text{season\_factor}
 """)
 
-st.markdown("📎 CO2_norm = CO₂ 증가량 정규화, ΔT_norm = 온도 변화 정규화, ΔH_norm = 습도 변화 정규화, PM_factor = 미세먼지 반영값, season_factor = 계절 보정")
+st.markdown("""
+<br>
+<small>
+📎 CO2_norm = CO₂ 증가량 정규화, ΔT_norm = 온도 변화 정규화, ΔH_norm = 습도 변화 정규화, PM_factor = 미세먼지 반영값, season_factor = 계절 보정</small>
+""", unsafe_allow_html=True)
 
 # ---------------------
 # SEco
@@ -75,12 +85,22 @@ st.markdown("##### 🔗 SEco 통합 지수")
 st.latex(r"""
 CVI = 0.7 \cdot SVI_{\text{lite}} + 0.3 \cdot HLI_{\text{lite}}
 """)
-st.markdown("📎 CVI = 공연장·시설 통합 위험도")
+
+st.markdown("""
+<br>
+<small>
+📎 CVI = 공연장·시설 통합 위험도</small>
+""", unsafe_allow_html=True)
 
 st.latex(r"""
 SEco = 0.5 \cdot CVI + 0.5 \cdot AQHI_{\text{month}}
 """)
-st.markdown("📎 AQHI_month = 월별 공기질 지수")
+
+st.markdown("""
+<br>
+<small>
+📎AQHI_month = 월별 공기질 지수</small>
+""", unsafe_allow_html=True)
 
 # ---------------------
 st.markdown("""
