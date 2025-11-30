@@ -68,10 +68,12 @@ st.markdown("""
 st.markdown("###### 3️⃣ AQHI (실내 공기질 지수)")
 
 st.latex(r"""
-AQHI_{raw} = 0.5 \cdot CO2_{norm}
+AQHI =  100 \times \left[
+0.5 \cdot CO2_{norm}
 + 0.2 \cdot \left( \frac{\Delta T_{norm} + \Delta H_{norm}}{2} \right)
 + 0.2 \cdot PM_{factor}
 + 0.1 \cdot \text{season\_factor}
+\right]
 """)
 
 st.markdown("""
@@ -86,7 +88,7 @@ st.markdown("""
 st.markdown("###### 4️⃣ SEco 통합 지수")
 
 st.latex(r"""
-CVI = 0.7 \cdot SVI_{\text{lite}} + 0.3 \cdot HLI_{\text{lite}}
+CVI = 0.7 \cdot SVI + 0.3 \cdot HLI
 """)
 
 st.markdown("""
