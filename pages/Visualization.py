@@ -1,15 +1,20 @@
 import streamlit as st
-import pandas as pd
-import plotly.express as px
+from PIL import Image
 
-st.title("📊 데이터 시각화")
+st.title("📊 데이터 시각화 대시보드")
 
-df = pd.read_excel("SEco.xlsx")
 
-fig = px.box(df, x="장르", y="SEco_norm", title="장르별 위험도 분포")
-st.plotly_chart(fig)
+st.subheader("📈 월별 전체 위험 시계열(Time Series)")
+st.image(Image.open("monthly_timeseries.jpg"), use_column_width=True)
 
-month_fig = px.line(df.groupby("MONTH")["SEco_norm"].mean().reset_index(),
-                    x="MONTH", y="SEco_norm",
-                    title="월별 평균 위험도")
-st.plotly_chart(month_fig)
+st.subheader("🔥 월별 위험 Heatmap")
+st.image(Image.open("risk_heatmap.jpg"), use_column_width=True)
+
+st.subheader("🎭 공연별 위험도 Top 10")
+st.image(Image.open("bar_risk_top10.jpg"), use_column_width=True)
+
+st.subheader("📊 SVI / HLI / AQHI 월별 비교")
+st.image(Image.open("monthly_3index.jpg"), use_column_width=True)
+
+st.subheader("📉 월별 AV-HSI 위험 점수")
+st.image(Image.open("monthly_risk.jpg"), use_column_width=True)
