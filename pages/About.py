@@ -3,10 +3,9 @@ import streamlit as st
 st.title("모델 설명 (SEco 구성)")
 
 st.markdown("""
-### 📌 SEco란?
+### 📌 SEco란 ?
 
-SafetyEco INDEX로 올림픽공원 공연장(진동·소음)과 스포츠센터(운동강도·공기질·혼잡)를 하나의 ‘안전·환경 통합지수’로 묶어 AI 기반으로 공연 위험도를 자동 예측하는 ESG 기반 시스템입니다.
-
+SafetyEco 지수로 공연 특성(SVI), 혼잡 부하(HLI), 공기질(AQHI)을 통합해 공연 환경의 위험도를 하나의 값으로 표현한 ‘안전·환경 통합지수’입니다.
 ---
 
 ### 🧑‍💻 사용한 데이터
@@ -120,7 +119,6 @@ st.markdown("""
 - **OneHotEncoder** : 공연장/장르를 벡터로 인코딩  
 - **ColumnTransformer** : 범주형 + 수치형 일괄 처리
 
-<br><br><br>
 
 ###### 2️⃣ 입력 특징 (Features)
 | Feature | 설명 |
@@ -130,7 +128,6 @@ st.markdown("""
 | 관람 인원 | 관람객 수 |
 | MONTH | 공연 월(계절성 반영) |
 
-<br><br><br>
 
 ###### 3️⃣ 모델 (Regressor)
 - **XGBoost Regressor**
@@ -138,7 +135,6 @@ st.markdown("""
 - learning_rate = 0.1  
 - max_depth = 5  
 
-<br><br><br>
 
 ###### 4️⃣ 출력 (Output)
 - **SEco 위험도 (0~100)**  
