@@ -120,7 +120,7 @@ st.markdown("""
 - **OneHotEncoder** : 공연장/장르를 벡터로 인코딩  
 - **ColumnTransformer** : 범주형 + 수치형 일괄 처리
 
-/n/n/n
+<br><br><br>
 
 ###### 2️⃣ 입력 특징 (Features)
 | Feature | 설명 |
@@ -130,7 +130,7 @@ st.markdown("""
 | 관람 인원 | 관람객 수 |
 | MONTH | 공연 월(계절성 반영) |
 
-/n/n/n
+<br><br><br>
 
 ###### 3️⃣ 모델 (Regressor)
 - **XGBoost Regressor**
@@ -138,7 +138,7 @@ st.markdown("""
 - learning_rate = 0.1  
 - max_depth = 5  
 
-/n/n/n
+<br><br><br>
 
 ###### 4️⃣ 출력 (Output)
 - **SEco 위험도 (0~100)**  
