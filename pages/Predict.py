@@ -78,5 +78,5 @@ if st.button("예측하기"):
         label = "🌳 1단계 (안전)"
 
     st.subheader("📌 예측 결과")
-    st.write(f"**AV-HSI 예측치:** {pred:.2f}")
+    st.write(f"**SEco 예측치:** {pred:.2f}")
     st.write(f"**위험 등급:** {label}")
