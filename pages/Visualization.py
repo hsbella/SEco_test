@@ -63,11 +63,15 @@ st.markdown("\n\n\n")
 
 
 # -------------------------------
-# 5. 월별 위험 Heatmap (가로 비율 1:3)
+# 5. 월별 위험 Heatmap (가로 비율 1:3, 텍스트 줄바꿈 제거)
 # -------------------------------
 st.markdown("##### 🔥 월별 위험 Heatmap")
-left_block(
-    "monthly_risk.jpg",
-    "5월과 10월이 가장 고위험 구간으로 나타납니다.",
-    ratio=[1, 3]  # ← 히트맵 1:3
-)
+
+col_left, col_right = st.columns([1, 3])
+with col_left:
+    st.image(Image.open("monthly_risk.jpg"), use_column_width=True)
+    st.markdown(
+        "<p style='color:gray; white-space: nowrap;'>5월과 10월이 가장 고위험 구간으로 나타납니다.</p>",
+        unsafe_allow_html=True
+    )
+
