@@ -39,7 +39,7 @@ SVI(i) = 100 \times \left[
 
 st.markdown("""
 <br>
-<small>📎 w_hall = 공연장 가중치, w_genre = 장르 가중치, audience_scaling = 관람인원 스케일링</small>
+<small>📎 w_hall = 공연장 변수, w_genre = 장르 변수, audience_scaling = 관람인원 스케일링</small>
 <br><br><br><br>
 """, unsafe_allow_html=True)
 
@@ -58,7 +58,7 @@ HLI(i) = 100 \times \left[
 st.markdown("""
 <br>
 <small>
-📎 visitors_scaling = 방문자수, parking_scaling = 주차량, facility_scaling = 시설 이용량 스케일링</small>
+📎 visitors_scaling = 방문자수, parking_scaling = 주차량, facility_scaling = 시설 이용량 </small>
 <br><br><br><br>
 """, unsafe_allow_html=True)
 
