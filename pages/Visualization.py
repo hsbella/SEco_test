@@ -23,18 +23,19 @@ st.markdown("\n\n\n")
 
 
 # -------------------------------
-# 2. 위험등급 분포 Pie chart (가로 비율 1:2)
+# 2. 위험등급 분포 Pie chart (다른 그래프 대비 3:4 가로폭)
 # -------------------------------
 st.markdown("##### 🍩 위험등급 분포 Pie chart")
 
-col1, col2 = st.columns([3, 4])   # ← 1:2 적용
+# 다른 그래프는 ratio=[4,1], 파이차트만 ratio=[3,1]
+col1, col2 = st.columns([3, 1])   # ← 여기서 파이차트 가로폭이 3/4로 줄어듦
 with col1:
     st.image(Image.open("risk_heatmap.jpg"), use_column_width=True)
-with col2:
     st.markdown(
-        "<p style='text-align:left; color:gray; padding-top:20px;'>전체 공연 중 3·4등급이 69%로 ‘중위험 이상’ 공연이 대부분입니다.</p>",
+        "<p style='color:gray;'>전체 공연 중 3·4등급이 69%로 ‘중위험 이상’ 공연이 대부분입니다.</p>",
         unsafe_allow_html=True
     )
+
 
 st.markdown("\n\n\n")
 
